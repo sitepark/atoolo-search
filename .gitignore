@@ -5,6 +5,7 @@
 !var/cache/.gitkeep
 /var/log/*
 !var/log/.gitkeep
+/var/test/*
 /tools
 .phpactor.json
 composer.lock

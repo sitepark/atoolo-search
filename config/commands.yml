@@ -1,0 +1,23 @@
+services:
+    _defaults:
+        autowire: true
+        autoconfigure: true
+    _instanceof:
+        Symfony\Component\Console\Command\Command:
+            tags: ['command']
+
+    Atoolo\Search\Console\:
+        resource: '../src/Console'
+
+    Atoolo\Search\Console\Command\Indexer:
+      arguments:
+        - !tagged_iterator { tag: 'atoolo.search.indexer.documentEnricher.schema2x' }
+
+    Atoolo\Search\Console\Command\DumpIndexDocument:
+      arguments:
+        - !tagged_iterator { tag: 'atoolo.search.indexer.documentEnricher.schema2x' }
+
+    Atoolo\Search\Console\Application:
+        public: true
+        arguments:
+            - !tagged command

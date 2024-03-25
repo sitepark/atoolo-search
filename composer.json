@@ -21,14 +21,17 @@
     "prefer-stable": true,
     "require": {
         "php": ">=8.1 <8.4.0",
-        "atoolo/resource": "dev-feature/hierarchy-loader",
+        "atoolo/resource": "dev-main",
         "solarium/solarium": "^6.3",
-        "symfony/config": "^6.3",
-        "symfony/console": "^6.3",
-        "symfony/dependency-injection": "^6.3",
-        "symfony/event-dispatcher": "^6.3",
-        "symfony/finder": "^6.3",
-        "symfony/yaml": "^6.3"
+        "symfony/config": "^6.3 | ^7.0",
+        "symfony/console": "^6.3 | ^7.0",
+        "symfony/dependency-injection": "^6.3 | ^7.0",
+        "symfony/event-dispatcher": "^6.3 | ^7.0",
+        "symfony/finder": "^6.3 | ^7.0",
+        "symfony/lock": "^6.3 | ^7.0",
+        "symfony/property-access": "^6.3 | ^7.0",
+        "symfony/serializer": "^6.3 | ^7.0",
+        "symfony/yaml": "^6.3 | ^7.0"
     },
     "require-dev": {
         "dealerdirect/phpcodesniffer-composer-installer": "^1.0",
@@ -36,7 +39,8 @@
         "phpcompatibility/php-compatibility": "^9.3",
         "phpunit/phpunit": "^10.4",
         "roave/security-advisories": "dev-latest",
-        "squizlabs/php_codesniffer": "^3.7"
+        "squizlabs/php_codesniffer": "^3.7",
+        "symfony/filesystem": "^6.3 | ^7.0"
     },
     "scripts": {
 
@@ -77,5 +81,7 @@
             "*": "dist"
         },
         "sort-packages": true
+    },
+    "repositories": {
     }
 }
